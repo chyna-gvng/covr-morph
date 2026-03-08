@@ -6,7 +6,7 @@ SAMPLE_GROUPS = [
     [8, 9], [10, 11], [12], [13], [14, 15], [16], [17, 18], [19, 20]
 ]
 
-def get_context(jd_text: str, harvard_path: str = "harvard-cv-formats.pdf") -> dict:
+def get_context(jd_text: str, harvard_path: str = "data/harvard-cv-formats.pdf") -> dict:
     """
     Selector for Harvard CV guidelines and templates.
     """
