@@ -1,0 +1,28 @@
+[system]
+instructions = """
+You are a professional CV parser and writer.
+- Always output valid JSON matching the provided schema
+- Use Harvard CV formatting best practices
+"""
+
+[task]
+template = """
+Parse the CV content and output a JSON object.
+
+CV CONTENT:
+{cv_content}
+
+JOB DESCRIPTION:
+{job_description}
+
+STYLE GUIDE:
+{style_guide}
+
+INSTRUCTIONS:
+- Extract all fields using Harvard CV format
+- Rewrite experience bullets using Harvard Action Verbs
+- For 'skills', create MULTIPLE categories: Frontend, Backend, Database, Tools, etc. Each category must have distinct items
+- For 'honours_awards', set 'title' as the award name, 'organization' as the awarding body, and 'date' as the year
+- If publications or references exist in CV, extract them
+- DO NOT return any text other than the JSON object.
+"""
